@@ -9,21 +9,27 @@ const OPTIONS = {
 };
 
 function getData(path) {
-  return fetch(`${ URL }/${ path }`, OPTIONS);
+  return fetch(URL + path, OPTIONS)
+    .then(res => res.json());
 }
 
-function getMangaChapter(manga, number) {
-  return getData(`manga/${ manga }/${ number }`);
-}
+const getMangaChapter = (manga, number) => getData(`/manga/${ manga }/${ number }`);
 
-function getGenreList() {
-  return getData('search/genres');
-}
+const getGenreList = () => getData('/search/genres');
 
-function getManga(manga) {
-  return getData(`manga/${ manga }`);
-}
+const getManga = manga => getData(`/manga/${ manga }`);
 
-function getMangaByGenre(genre, cover = 0, info = 0) {
-  return getData(`search/genres/${ genre }`);
-}
+const getMangaByGenre = (genre, cover = 0, info = 0) => getData(`/search/genres/${ genre }`);
+
+const getMangaList = (cover = 0, info = 0) => getData(`?cover=${ cover }&info=${ info }`);
+
+const search = (query, genre = [], info = 0, cover = 0) => getData(`/q=${ query }&g=${ genre }&cover=${ cover }&info=${ info }`);
+
+export {
+  getMangaChapter,
+  getGenreList,
+  getManga,
+  getMangaList,
+  getMangaByGenre,
+  search
+};
