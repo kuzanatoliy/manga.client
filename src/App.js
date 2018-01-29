@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from './components/Header';
 import GenreNavigator from './components/GenreNavigator';
+import Router from './AppRouter';
 
 class App extends Component {
   render() {
@@ -17,7 +18,9 @@ class App extends Component {
           <section className="navigation">
             <GenreNavigator />
           </section>
-          <section className="content">Content</section>
+          <section className="content">
+            <Router />
+          </section>
         </main>
         <footer>footer</footer>
       </div>
