@@ -1,32 +1,23 @@
-import React, { Component } from 'react';
+import React from 'react';
 import * as PropTypes from 'prop-types';
-import Loading from '../components/Loading';
+import LoadingComponent from '../components/LoadingComponent';
 
-class MangaListPage extends Component {
+class MangaListPage extends LoadingComponent {
   static defaultProps = {
     loading: false,
-    mangaList: []
+    mangaList: [],
+    className: 'manga-list-page'
   };
 
   static propTypes = {
     loading: PropTypes.bool,
-    mangaList: PropTypes.array
+    mangaList: PropTypes.array,
+    className: PropTypes.string
   };
 
-  createLoadingContainer() {
-    return (
-      <Loading className='loading loading-page loading-manga-page' />
-    );
-  }
-
-  render() {
-    const { loading, mangaList } = this.props;
-    return (
-      <div className='manga-list'>
-        { loading
-            ? this.createLoadingContainer()
-            : 'bugaga' }
-      </div>
+  createBody() {
+    return(
+      <div>bugaga</div>
     );
   }
 }

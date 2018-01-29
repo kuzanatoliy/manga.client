@@ -9,8 +9,6 @@ class MangaListPage extends Page {
   }
 }
 
-const convertGenre = item => item.genreId;
-
 const mapStateToProps = store => {
   const { mangaListReducer } = store;
   return { ...mangaListReducer }; 

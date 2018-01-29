@@ -1,42 +1,31 @@
-import React, { Component } from 'react';
+import React from 'react';
 import * as PropTypes from 'prop-types';
-import Loading from './Loading';
+import LoadingComponent from './LoadingComponent';
 import Item from './MenuItem';
 
-class GenreNavigator extends Component {
+class GenreNavigator extends LoadingComponent {
   static defaultProps = {
     loading: false,
-    genres: []
+    genres: [],
+    className: 'genre-navigator'
   };
 
   static propTypes = {
     loading: PropTypes.bool,
-    genres: PropTypes.array
+    genres: PropTypes.array,
+    className: PropTypes.string
   };
-  
-  createLoadingContainer() {
-    return (
-      <Loading className='loading genre-navigator-loading' />
-    );
-  }
 
   createItems(list) {
     return list.map(item => <Item key={ item } href={ `/manga-list/${ item }` } className={ `genre genre-${ item }` }>{ item }</Item>)
   }
-  
-  render() {
-    const { loading, genres } = this.props;
+
+  createBody() {
     return (
-      <div>
-        { loading
-            ? this.createLoadingContainer()
-            : (
-              <ul>
-                <Item href="/manga-list" className='genre genre-all'> all </ Item>
-                { this.createItems(genres) }
-              </ul>
-            )}
-      </div>
+      <ul>
+        <Item href="/manga-list" className='genre genre-all'> all </ Item>
+        { this.createItems(this.props.genres) }
+      </ul>
     );
   }
 }

@@ -2,7 +2,7 @@ import React from 'react';
 
 function Loading(props) {
   return (
-    <div>
+    <div className={ `loading ${ props.className }` }>
       Loading...
     </div>
   );
