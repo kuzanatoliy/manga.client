@@ -13,13 +13,11 @@ const convertGenre = item => item.genreId;
 
 const mapStateToProps = store => {
   const { genresReducer } = store;
-  console.log(genresReducer);
   return { ...genresReducer }; 
 };
 
 const mapDispatchToProps = dispatch => ({
   loadingData: () => {
-    console.log(1);
     dispatch(actions.loadGenres());
     getGenreList()
       .then(json => dispatch(actions.loadGenresSuccess(json.map(convertGenre))));

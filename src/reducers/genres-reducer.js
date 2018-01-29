@@ -9,10 +9,10 @@ const defaultState = {
 const reducer = (state = defaultState, action) => {
   switch(action.type) {
     case actionTypes.LOAD_GENRES: {
-      return { ...state, loading: true }
+      return { ...state, loading: true, error: null }
     }
     case actionTypes.LOAD_GENRES_SUCCESS: {
-      return { ...state, genres: action.genres, loading: false }
+      return { ...state, genres: action.genres, loading: false, error: null }
     }
     default: {
       return { ...state }
