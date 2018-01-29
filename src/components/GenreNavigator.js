@@ -1,24 +1,24 @@
 import React, { Component } from 'react';
+import * as PropTypes from 'prop-types';
 import { getGenreList } from '../lib/manga-scraper-request';
 import Loading from './Loading';
 import Item from './MenuItem';
 
 class GenreNavigator extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      loading: true
-    }
+  static defaultProps = {
+    loading: false,
+    genres: []
+  };
+
+  static propTypes = {
+    loading: PropTypes.bool,
+    genres: PropTypes.array
+  };
+
+  shouldComponentUpdate(nextProps, nextState) {
+    return !(this.props.loading === nextProps.loading);
   }
   
-  componentDidMount() {
-    getGenreList()
-      .then(json => {
-        this.genreList = json.map( item => item.genreId );
-        this.setState({ loading: false });
-      });
-  }
-
   createLoadinContainer() {
     return (
       <Loading className='loading genre-navigator-loading' />
@@ -30,14 +30,15 @@ class GenreNavigator extends Component {
   }
   
   render() {
+    const { loading, genres } = this.props;
     return (
       <div>
-        { this.state.loading
+        { loading
             ? <Loading />
             : (
               <ul>
                 <Item href="/manga-list" className='genre genre-all'> all </ Item>
-                { this.createItems(this.genreList) }
+                { this.createItems(genres) }
               </ul>
             )}
       </div>
