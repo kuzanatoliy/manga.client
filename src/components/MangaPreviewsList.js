@@ -31,7 +31,6 @@ class MangaPreviewsList extends LoadingComponent {
   }
 
   createBody() {
-    console.log(this.createMangaPreview);
     return(
       <Paginator 
         className='manga-previews-list' 
