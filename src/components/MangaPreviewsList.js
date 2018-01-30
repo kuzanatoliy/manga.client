@@ -1,13 +1,14 @@
 import React from 'react';
 import * as PropTypes from 'prop-types';
-import LoadingComponent from '../components/LoadingComponent';
-import MangaPreview from '../components/MangaPreview';
+import LoadingComponent from './LoadingComponent';
+import MangaPreview from './MangaPreview';
+import Paginator from './Paginator';
 
-class MangaListPage extends LoadingComponent {
+class MangaPreviewsList extends LoadingComponent {
   static defaultProps = {
     loading: false,
     mangaList: [],
-    className: 'manga-list-page'
+    className: 'manga-previews-list'
   };
 
   static propTypes = {
@@ -18,7 +19,6 @@ class MangaListPage extends LoadingComponent {
 
   createMangaPreview(item) {
     const { mangaId, cover, info, name } = item;
-    console.log(item);
     return (
       <MangaPreview 
         key={ mangaId }
@@ -31,11 +31,15 @@ class MangaListPage extends LoadingComponent {
   }
 
   createBody() {
-    console.log(this.props.mangaList);
+    console.log(this.createMangaPreview);
     return(
-      <div>{ this.props.mangaList.map(this.createMangaPreview) }</div>
+      <Paginator 
+        className='manga-previews-list' 
+        createComponent={ this.createMangaPreview } 
+        list={ this.props.mangaList } 
+      />
     );
   }
 }
 
-export default MangaListPage;
+export default MangaPreviewsList;

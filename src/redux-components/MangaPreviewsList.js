@@ -1,9 +1,9 @@
-import Page from '../pages/MangaListPage';
+import List from '../components/MangaPreviewsList';
 import { getMangaList } from '../lib/manga-scraper-request';
 import { connect } from 'react-redux';
 import { actions } from '../action/manga-list-action';
 
-class MangaListPage extends Page {
+class MangaPreviewsList extends List {
   componentDidMount() {
     this.props.loadingData();
   }
@@ -22,4 +22,4 @@ const mapDispatchToProps = dispatch => ({
   }
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(MangaListPage);
+export default connect(mapStateToProps, mapDispatchToProps)(MangaPreviewsList);

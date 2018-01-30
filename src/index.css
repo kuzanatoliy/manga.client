@@ -77,12 +77,12 @@ main::after {
   clear: both;
 }
 
-main > section {
+.content {
   box-sizing: border-box;
   overflow: hidden;
 }
 
-main > .navigation {
+.user-navigation {
   width: 200px;
   float: left;
 }

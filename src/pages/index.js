@@ -1,11 +1,13 @@
-import ErrorPage from './ErrorPage';
-import MangaChaptersPage from './MangaChaptersPage';
-import MangaListPage from './MangaListPage';
-import MangaPage from './MangaPage';
+import CatalogPage from './CatalogPage';
+//import ErrorPage from './ErrorPage';
+//import MangaChaptersPage from './MangaChaptersPage';
+//import MangaListPage from './MangaListPage';
+//import MangaPage from './MangaPage';
 
 export {
-  ErrorPage,
-  MangaChaptersPage,
-  MangaListPage,
-  MangaPage
+  CatalogPage
+  //ErrorPage,
+  //MangaChaptersPage,
+  //MangaListPage,
+  //MangaPage
 }
