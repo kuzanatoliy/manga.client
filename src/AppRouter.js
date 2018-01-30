@@ -1,7 +1,5 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
-import { ErrorPage, MangaChaptersPage, MangaPage } from './pages';
-import MangaListPage from './redux-components/MangaListPage';
 import { HOME_URL, CATALOG_URL, SEARCH_URL, MANGA_URL } from './constants/urls';
 
 function AppRouter() {

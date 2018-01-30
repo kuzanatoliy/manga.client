@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from './components/Header';
+import Navigator from './components/Navigator';
 //import GenreNavigator from './redux-components/GenreNavigator';
 import Router from './AppRouter';
 
@@ -8,12 +9,7 @@ class App extends Component {
     return (
       <div>
         <Header text='Manga client' />
-        <nav>
-          <ul>
-            <li><a href="#">Item 1</a></li>
-            <li><a href="#">Item 2</a></li>
-          </ul>
-        </nav>
+        <Navigator />
         <main>
           <Router />
         </main>
