@@ -12,7 +12,7 @@ const reducer = (state = defaultState, action) => {
       return { ...state, loading: true, error: null };
     }
     case actionTypes.LOAD_MANGA_LIST_SUCCESS: {
-      return { ...state, loading: false, error: null };
+      return { ...state, mangaList: action.mangaList, loading: false, error: null };
     }
     default: {
       return { ...state };

@@ -23,7 +23,7 @@ class GenreNavigator extends LoadingComponent {
   createBody() {
     return (
       <ul>
-        <Item href="/manga-list" className='genre genre-all'> all </ Item>
+        <Item href='/manga-list' className='genre genre-all'> all </ Item>
         { this.createItems(this.props.genres) }
       </ul>
     );

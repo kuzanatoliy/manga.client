@@ -18,8 +18,7 @@ const mapDispatchToProps = dispatch => ({
   loadingData: () => {
     dispatch(actions.loadMangaList());
     getMangaList(1, 1)
-      //.then(json => dispatch(actions.loadGenresSuccess(json.map(convertGenre))));
-      .then(json => console.log(json));
+      .then(json => dispatch(actions.loadMangaListSuccess(json)));
   }
 });
 
