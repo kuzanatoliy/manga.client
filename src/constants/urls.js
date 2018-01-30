@@ -1,3 +1,4 @@
-export const MANGA_HOME_URL = '/';
-export const MANGA_LIST_URL = '/manga-list';
+export const HOME_URL = '/';
+export const SEARCH_URL = '/search';
+export const CATALOG_URL = '/catalog';
 export const MANGA_URL = '/manga';

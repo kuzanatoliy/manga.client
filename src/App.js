@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Header from './components/Header';
-import GenreNavigator from './redux-components/GenreNavigator';
+//import GenreNavigator from './redux-components/GenreNavigator';
 import Router from './AppRouter';
 
 class App extends Component {
@@ -15,12 +15,7 @@ class App extends Component {
           </ul>
         </nav>
         <main>
-          <section className="navigation">
-            <GenreNavigator />
-          </section>
-          <section className="content">
-            <Router />
-          </section>
+          <Router />
         </main>
         <footer>footer</footer>
       </div>
