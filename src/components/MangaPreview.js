@@ -1,5 +1,6 @@
 import React from 'react';
 import * as PropTypes from 'prop-types';
+import { MANGA_URL } from '../constants/urls';
 
 function MangaPreview(props) {
   const { mangaId, info, cover, name } = props;
@@ -8,7 +9,7 @@ function MangaPreview(props) {
       <img src={ cover } />
       <h3>{ name }</h3>
       <p>{ info }</p>
-      <a href='#'>Show more</a>
+      <a href={ `${ MANGA_URL }/${ mangaId }` }>Show more</a>
     </div>
   );
 }

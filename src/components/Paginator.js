@@ -97,7 +97,7 @@ class Paginator extends Component {
   createPagesButtons() {
     const { pageCount, activePage } = this.state;
     const { showingButtons } = this.props;
-    const half = parseInt(showingButtons / 2);
+    const half = Math.floor(showingButtons / 2);
     let result;
     if (pageCount < showingButtons) {
       result = this.createButtonsList(1, pageCount + 1);
