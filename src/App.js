@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Header from './components/Header';
 import Navigator from './components/Navigator';
-//import GenreNavigator from './redux-components/GenreNavigator';
 import Router from './AppRouter';
 
 class App extends Component {
