@@ -19,3 +19,13 @@
   @if $horizontal == 0
     $horizontal: $vertical
   margin: $vertical $horizontal
+
+@mixin vertical-center
+  display: inline-block
+  vertical-align: middle
+
+@mixin vertical-center-before
+  &::before
+    height: 100%
+    content: ''
+    @include vertical-center
