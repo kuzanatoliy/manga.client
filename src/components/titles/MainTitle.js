@@ -11,4 +11,8 @@ MainTitle.propTypes = {
   className: PropTypes.string
 };
 
+MainTitle.defaultProps = {
+  className: ''
+};
+
 export default MainTitle;
