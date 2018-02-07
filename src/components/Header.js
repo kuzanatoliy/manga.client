@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { MainTitle } from './titles';
 
 function Header(props) {
   const { text } = props
   return (
     <header>
-      <h1>{ text }</h1>
+      <MainTitle>{ text }</MainTitle>
     </header>
   );
 }
