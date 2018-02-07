@@ -27,11 +27,13 @@ header
   width: 100%
   height: $header-height
   text-align: center
-  @include vartical-center-before
+  @include vertical-center-before
   h1
+    $size: $header-height / 2
+    font-size: $size
     @include margin
+    @include padding($size / 10)
     @include vertical-center
-    font-size: 4em
 
 /* Nav style */
 
