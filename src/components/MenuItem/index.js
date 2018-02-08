@@ -13,7 +13,7 @@ function MenuItem(props) {
 
 MenuItem.propTypes = {
   className: PropTypes.string,
-  href: PropTypes.href
+  href: PropTypes.string
 };
 
 MenuItem.defaultProps = {

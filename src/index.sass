@@ -11,6 +11,9 @@ h4, h5, h6
 
 /* Body style */
 
+*
+  outline: none
+
 body
   @include font-text
   @include margin
@@ -62,6 +65,17 @@ nav
     transition: text-shadow 1s
     color: $background-color
     text-shadow: 0.05em 0.05em map-get($green, $dark)
+
+/* Paginator */
+
+.paginator-controls
+  font-size: 1.25em
+  color: map-get($blue, $normal)
+  .page
+    background-color: $background-color
+    border: none
+    &.active
+      color: map-get($orange, $normal)
 
 footer
   width: 100%
