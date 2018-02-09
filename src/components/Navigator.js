@@ -2,7 +2,6 @@ import React from 'react';
 import * as PropTypes from 'prop-types';
 import { CATALOG_URL, SEARCH_URL } from '../../constants/urls';
 import Item from '../MenuItem';
-import './index.css';
 
 function Navigator(props) {
   const { className } = props;

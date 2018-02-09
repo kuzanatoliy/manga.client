@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { MainTitle } from './titles';
+import MainTitle from './MainTitle';
 
 function Header(props) {
   const { text } = props

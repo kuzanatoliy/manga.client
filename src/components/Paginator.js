@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import * as PropTypes from 'prop-types';
-import './index.css';
 
 class Paginator extends Component {
   static defaultProps = {
