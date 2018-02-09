@@ -6,12 +6,12 @@ import Item from './MenuItem';
 function Navigator(props) {
   const { className } = props;
   return (
-    <nav className={ `navigator ${ className }` }>
+    <div className={ `navigator ${ className }` }>
       <ul className='navigator-menu'>
         <Item href={ CATALOG_URL } horizontal={ true }>Catalog</Item>
         <Item href={ SEARCH_URL } horizontal={ true }>Search</Item>
       </ul>
-    </nav>
+    </div>
   );
 }
 

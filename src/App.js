@@ -8,8 +8,15 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Header text='Manga client' />
-        <Button backgroundColor='green'>Button</Button>
+        <header>
+          <Header text='Manga client' />
+        </header>
+        <nav>
+          <Navigator />
+        </nav>
+        <footer>
+          <div>footer</div>
+        </footer>
       </div>  
     );
   }
