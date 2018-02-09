@@ -1,10 +1,19 @@
 import React, { Component } from 'react';
+import Button from 'material-ui/RaisedButton';
 import Header from './components/Header';
 import Navigator from './components/Navigator';
 import Router from './AppRouter';
 
 class App extends Component {
   render() {
+    return (
+      <div>
+        <Header text='Manga client' />
+        <Button backgroundColor='green'>Button</Button>
+      </div>  
+    );
+  }
+  /*render() {
     return (
       <div>
         <Header text='Manga client' />
@@ -15,7 +24,7 @@ class App extends Component {
         <footer>footer</footer>
       </div>
     );
-  }
+  }*/
 }
 
 export default App;
