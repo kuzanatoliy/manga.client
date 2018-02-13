@@ -1,8 +1,8 @@
 import React from 'react';
 import * as PropTypes from 'prop-types';
-import { NavLink } from 'react-router-dom';
 import LoadingComponent from './LoadingComponent';
 import { CATALOG_URL } from '../constants/urls';
+import Link from './RouterLink';
 
 class GenreNavigator extends LoadingComponent {
   static defaultProps = {
@@ -20,14 +20,14 @@ class GenreNavigator extends LoadingComponent {
   };
 
   createItems(list) {
-    return list.map(item => <NavLink key={ item } to={ `${ CATALOG_URL }/${ item }` } className={ `genre genre-${ item }` }>{ item }</NavLink>)
+    return list.map(item => <Link key={ item } to={ `${ CATALOG_URL }/${ item }` } className={ `genre genre-${ item }` }>{ item }</Link>)
   }
 
   createBody() {
     return (
       <ul>
         <h3>{ this.props.title }</h3>
-        <NavLink to={ CATALOG_URL } className='genre genre-all'> all </ NavLink>
+        <Link to={ CATALOG_URL } className='genre genre-all'> all </Link>
         { this.createItems(this.props.genres) }
       </ul>
     );

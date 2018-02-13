@@ -3,11 +3,15 @@ import Navigator from './Navigator';
 
 function Main(props) {
   return (
-    <section>
+    <section style={ style }>
       <Navigator />
       { props.children }
     </section>
   );
+}
+
+const style = {
+  minHeight: 'calc(100vh - 11em)'
 }
 
 export default Main;
