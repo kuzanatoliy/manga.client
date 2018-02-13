@@ -6,7 +6,7 @@ import { CORMORANT_SC } from '../constants/font-families';
 function MainTitle(props) {
   const { style, children } = props;
   return(
-    <h1 style={ { ...defaultStyle, ...style } }>{ props.children }</h1>
+    <h1 style={ { ...defaultStyle, ...style } }>{ children }</h1>
   );
 }
 

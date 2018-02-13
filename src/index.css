@@ -3,5 +3,9 @@
 
 body {
   margin: 0;
+}
+
+header, nav, main, footer {
+  margin: 0;
   padding: 0 calc((100% - 1366px) / 2);
 }

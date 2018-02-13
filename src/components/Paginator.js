@@ -50,7 +50,6 @@ class Paginator extends Component {
   }
 
   createButton(number, title, className, disabled = false) {
-    console.log((this.state.activePage === number) ? ' active' : '');
     return (
       <button 
         key={ className + number }

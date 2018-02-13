@@ -5,10 +5,10 @@ import MainTitle from './MainTitle';
 function Header(props) {
   const { text, style } = props
   return (
-    <div style = { { ...style, ...styles.container } }>
+    <header style = { { ...style, ...styles.container } }>
       <MainTitle style={ styles.title }>{ text }</MainTitle>
       <div style={ styles.after } />
-    </div>
+    </header>
   );
 }
 
