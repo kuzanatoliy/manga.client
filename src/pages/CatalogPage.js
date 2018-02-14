@@ -5,14 +5,24 @@ import MangaPreviewsList from '../redux-components/MangaPreviewsList';
 function CatalogPage(props) {
   return (
     <main>
-      <section className='user-navigation'>
+      <section style={ styles.navigator }>
         <GenreNavigator />
       </section>
-      <section className='content'>
+      <section style={ styles.content }>
         <MangaPreviewsList />
       </section>
     </main>
   );
 }
+
+const styles = {
+  navigator: {
+    maxWidth: '15em',
+    float: 'left'
+  },
+  content: {
+    overflow: 'hidden'
+  }
+};
 
 export default CatalogPage;
