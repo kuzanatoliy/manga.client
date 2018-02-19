@@ -9,7 +9,7 @@ function CatalogPage(props) {
         <GenreNavigator />
       </section>
       <section style={ styles.content }>
-        <MangaPreviewsList />
+        <MangaPreviewsList genreId={ props.match.params.genreId }/>
       </section>
     </main>
   );

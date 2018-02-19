@@ -1,11 +1,11 @@
 import List from '../components/MangaPreviewsList';
-import { getMangaList } from '../lib/manga-scraper-request';
+import { getMangaList, getMangaByGenre } from '../lib/manga-scraper-request';
 import { connect } from 'react-redux';
 import { actions } from '../action/manga-list-action';
 
 class MangaPreviewsList extends List {
   componentDidMount() {
-    this.props.loadingData();
+    this.props.loadingData(this.props.genreId);
   }
 }
 
@@ -15,10 +15,10 @@ const mapStateToProps = store => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  loadingData: () => {
+  loadingData: (genreId) => {
     dispatch(actions.loadMangaList());
-    getMangaList(1, 1)
-      .then(json => dispatch(actions.loadMangaListSuccess(json)));
+    const result = (genreId) ? getMangaByGenre(genreId, 1, 1) : getMangaList(1, 1);
+    result.then(json => dispatch(actions.loadMangaListSuccess(json)));
   }
 });
 

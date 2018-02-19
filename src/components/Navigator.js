@@ -15,7 +15,6 @@ class Navigator extends Component {
         <Toolbar style={ style }>
           <ToolbarGroup>
             <Link to={ CATALOG_URL } style={ content } hoverStyle={ hoverContent }>Catalog</Link>
-            <Link to={ SEARCH_URL } style={ content } hoverStyle={ hoverContent }>Search</Link>
           </ToolbarGroup>
         </Toolbar>
       </nav>

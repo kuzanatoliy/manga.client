@@ -19,7 +19,7 @@ export const getGenreList = () => getData('/search/genres');
 
 export const getManga = manga => getData(`/manga/${ manga }`);
 
-export const getMangaByGenre = (genre, cover = 0, info = 0) => getData(`/search/genres/${ genre }`);
+export const getMangaByGenre = (genre, cover = 0, info = 0) => getData(`/search/genres/${ genre }?cover=${ cover }&info=${ info }`);
 
 export const getMangaList = (cover = 0, info = 0) => getData(`?cover=${ cover }&info=${ info }`);
 
