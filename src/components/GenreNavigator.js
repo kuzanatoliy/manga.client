@@ -2,7 +2,7 @@ import React from 'react';
 import * as PropTypes from 'prop-types';
 import Menu from 'material-ui/Menu';
 import MenuItem from 'material-ui/MenuItem';
-import { lightBlue600 } from 'material-ui/styles/colors'
+import { lightBlue600 } from 'material-ui/styles/colors';
 import LoadingComponent from './LoadingComponent';
 import { CATALOG_URL } from '../constants/urls';
 import { CORMORANT_INFANT } from '../constants/font-families';
