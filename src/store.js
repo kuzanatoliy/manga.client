@@ -5,6 +5,7 @@ import {createStore, applyMiddleware, compose} from 'redux';
 
 import genresReducer from './reducers/genres-reducer';
 import mangaListReducer from './reducers/manga-list-reducer';
+import mangaReducer from './reducers/manga-reducer';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
@@ -12,9 +13,10 @@ export default function configureStore(preloadedState = {}) {
   return createStore(
     combineReducers({
       genresReducer,
-      mangaListReducer
+      mangaListReducer,
+      mangaReducer
     }),
     preloadedState,
     composeEnhancers(applyMiddleware(reduxThunk, reduxLogger))
-  )
+  );
 }

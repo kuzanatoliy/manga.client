@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import * as PropTypes from 'prop-types';
 import { Toolbar, ToolbarGroup } from 'material-ui/Toolbar';
 import { lightBlue50, lightBlue600, lightBlue900 } from 'material-ui/styles/colors';
-import { CATALOG_URL, SEARCH_URL } from '../constants/urls';
+import { CATALOG_URL } from '../constants/urls';
 import { CORMORANT_INFANT } from '../constants/font-families';
 import Link from './RouterLink';
 
