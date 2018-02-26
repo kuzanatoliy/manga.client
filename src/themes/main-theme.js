@@ -1,3 +1,4 @@
+import { blue } from 'material-ui/colors';
 //import {  } from 'material-ui/styles/colors';
 /*import {
   cyan500, cyan700,
@@ -8,10 +9,19 @@
 import {fade} from '../../utils/colorManipulator';
 import spacing from '../spacing';*/
 
+const LIGHT = 100;
+const MAIN = 600;
+const DARK = 900;
+
 export default {
   //spacing: spacing,
   //fontFamily: 'Roboto, sans-serif',
   palette: {
+    primary: {
+      light: blue[LIGHT],
+      main: blue[MAIN],
+      dark: blue[DARK]
+    }
     //primary1Color: cyan500,
     //primary2Color: cyan700,
     //primary3Color: grey400,
@@ -26,5 +36,5 @@ export default {
     //pickerHeaderColor: cyan500,
     //clockCircleColor: fade(darkBlack, 0.07),
     //shadowColor: fullBlack,
-  },
+  }
 };
