@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import * as PropTypes from 'prop-types';
 import { Toolbar, ToolbarGroup } from 'material-ui/Toolbar';
-import { lightBlue50, lightBlue600, lightBlue900 } from 'material-ui/styles/colors';
+//import { lightBlue50, lightBlue600, lightBlue900 } from 'material-ui/styles/colors';
 import { CATALOG_URL } from '../constants/urls';
 import { CORMORANT_INFANT } from '../constants/font-families';
 import Link from './RouterLink';
@@ -10,7 +10,7 @@ class Navigator extends Component {
   render() {
     const { container, content, hoverContent } = Navigator.styles
     const style = { ...container, ...this.props.style };
-    return (
+    /*return (
       <nav style={ style }>
         <Toolbar style={ style }>
           <ToolbarGroup>
@@ -18,10 +18,11 @@ class Navigator extends Component {
           </ToolbarGroup>
         </Toolbar>
       </nav>
-    );
+    );*/
+    return <div>bla</div>;
   }
 
-  static styles = {
+  /*static styles = {
     container: {
       fontFamily: CORMORANT_INFANT,
       backgroundColor: lightBlue600,
@@ -47,7 +48,7 @@ class Navigator extends Component {
   
   static defaultProps = {
     style: {}
-  }; 
+  };*/ 
 }
 
 export default Navigator;

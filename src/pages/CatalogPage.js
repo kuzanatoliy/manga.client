@@ -3,7 +3,7 @@ import GenreNavigator from '../redux-components/GenreNavigator';
 import MangaPreviewsList from '../redux-components/MangaPreviewsList';
 
 function CatalogPage(props) {
-  return (
+  /*return (
     <main>
       <section style={ styles.navigator }>
         <GenreNavigator />
@@ -12,7 +12,8 @@ function CatalogPage(props) {
         <MangaPreviewsList genreId={ props.match.params.genreId }/>
       </section>
     </main>
-  );
+  );*/
+  return <div>Main</div>
 }
 
 const styles = {

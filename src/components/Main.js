@@ -2,12 +2,13 @@ import React from 'react';
 import Navigator from './Navigator';
 
 function Main(props) {
-  return (
+  /*return (
     <section style={ style }>
       <Navigator />
       { props.children }
     </section>
-  );
+  );*/
+  return <div>bla</div>;
 }
 
 const style = {

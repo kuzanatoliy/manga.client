@@ -1,7 +1,7 @@
 import React from 'react';
 import * as PropTypes from 'prop-types';
 import Paper from 'material-ui/Paper';
-import { lightBlue600, lightBlue900 } from 'material-ui/styles/colors';
+//import { lightBlue600, lightBlue900 } from 'material-ui/styles/colors';
 import { MANGA_URL } from '../constants/urls';
 import { CORMORANT_SC, CORMORANT_INFANT } from '../constants/font-families';
 import Link from './RouterLink';
@@ -39,7 +39,7 @@ const styles = {
   title: {
     fontSize: '1.75em',
     fontFamily: CORMORANT_SC,
-    color: lightBlue600
+    //color: lightBlue600
   },
   clearFix: {
     clear: 'both'
@@ -47,10 +47,10 @@ const styles = {
   link: {
     textDecoration: 'none',
     padding: '0.25em',
-    color: lightBlue900,
+    //color: lightBlue900,
   },
   hoverLink: {
-    color: lightBlue600
+    //color: lightBlue600
   }
 };
 

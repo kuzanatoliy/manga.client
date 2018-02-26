@@ -1,8 +1,8 @@
 import React from 'react';
 import * as PropTypes from 'prop-types';
 import Menu from 'material-ui/Menu';
-import MenuItem from 'material-ui/MenuItem';
-import { lightBlue600 } from 'material-ui/styles/colors';
+//import MenuItem from 'material-ui/MenuItem';
+//import { lightBlue600 } from 'material-ui/styles/colors';
 import LoadingComponent from './LoadingComponent';
 import { CATALOG_URL } from '../constants/urls';
 import { CORMORANT_INFANT } from '../constants/font-families';
@@ -30,11 +30,12 @@ class GenreNavigator extends LoadingComponent {
 
   createLink(href, title) {
     const { menuItem, link } = GenreNavigator.styles;
-    return (
+    /*return (
       <MenuItem key={ href } style={ menuItem }>
         <Link to={ href } style={ link }> { title } </Link>
       </MenuItem>
-    );
+    );*/
+    return <div>Bla</div>
   }
   
   createLinkItems(list) {
@@ -58,7 +59,7 @@ class GenreNavigator extends LoadingComponent {
     link: {
       fontFamily: CORMORANT_INFANT,
       fontSize: '1.5em',
-      color: lightBlue600,
+      //color: lightBlue600,
       textDecoration: 'none',
       textAlign: 'center',
       display: 'inline-block',

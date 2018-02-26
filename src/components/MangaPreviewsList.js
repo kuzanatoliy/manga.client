@@ -1,6 +1,6 @@
 import React from 'react';
 import * as PropTypes from 'prop-types';
-import { lightBlue600 } from 'material-ui/styles/colors';
+//import { lightBlue600 } from 'material-ui/styles/colors';
 import { CORMORANT_INFANT } from '../constants/font-families';
 import LoadingComponent from './LoadingComponent';
 import MangaPreview from './MangaPreview';
@@ -50,9 +50,9 @@ class MangaPreviewsList extends LoadingComponent {
     },
     buttonStyle: {
       fontFamily: CORMORANT_INFANT,
-      color: lightBlue600,
+      //color: lightBlue600,
       backgroundColor: 'white',
-      border: `solid 0.1em ${ lightBlue600 }`,
+      //border: `solid 0.1em ${ lightBlue600 }`,
       margin: '0.25em',
       padding: '0.25em',
       fontSize: '1.5em',
