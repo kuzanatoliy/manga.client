@@ -12,11 +12,7 @@
     "eject": "react-scripts eject"
   },
   "dependencies": {
-<<<<<<< HEAD
     "material-ui": "1.0.0-beta.35",
-=======
-    "material-ui": "1.0.0-beta.34",
->>>>>>> 9e6ad1ab790c6cfe037083d2b8de7d1b0947df1f
     "react": "16.2.0",
     "react-dom": "16.2.0",
     "react-redux": "5.0.6",
