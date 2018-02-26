@@ -29,6 +29,7 @@ export default {
     }
   },
   sizing: {
+    side: 'calc((100% - 1366px) / 2)',
     header: {
       height: '6em',
       fontSize: '4em'

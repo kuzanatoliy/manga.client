@@ -28,6 +28,7 @@ function createStyles(theme) {
     container: {
       height,
       textAlign: 'center',
+      padding: `0 ${ theme.sizing.side }`,
       '&:after': {
         height,
         content: '""',
