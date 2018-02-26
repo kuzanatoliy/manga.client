@@ -18,7 +18,7 @@ Header.propTypes = {
 };
 
 Header.defaultProps = {
-  title: 'Manga Client',
+  title: 'Title',
   className: ''
 };
 

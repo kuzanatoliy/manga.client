@@ -33,6 +33,9 @@ export default {
     header: {
       height: '6em',
       fontSize: '4em'
+    },
+    footer: {
+      height: '2em'
     }
   }
 };
