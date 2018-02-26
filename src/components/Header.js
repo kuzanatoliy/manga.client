@@ -1,13 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import MainTitle from './MainTitle';
-import Title from './Titles/Title';
+import { MainTitle } from './titles';
 
 function Header(props) {
   const { text, style } = props
   return (
     <header style = { { ...style, ...styles.container } }>
-      <Title>Bugaga</Title>
+      <MainTitle>Bugaga</MainTitle>
       <div style={ styles.after } />
     </header>
   );

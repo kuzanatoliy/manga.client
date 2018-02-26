@@ -1,4 +1,5 @@
 import { blue } from 'material-ui/colors';
+import { CORMORANT_SC, CORMORANT_INFANT } from '../constants/font-families';
 //import {  } from 'material-ui/styles/colors';
 /*import {
   cyan500, cyan700,
@@ -36,5 +37,11 @@ export default {
     //pickerHeaderColor: cyan500,
     //clockCircleColor: fade(darkBlack, 0.07),
     //shadowColor: fullBlack,
+  },
+  typography: {
+    fontFamily: CORMORANT_INFANT,
+    title: {
+      fontFamily: CORMORANT_SC
+    }
   }
 };
