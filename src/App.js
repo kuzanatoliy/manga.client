@@ -7,7 +7,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Header text='Manga client' />
+        <Header />
         <Router />
         <Footer />
       </div>
