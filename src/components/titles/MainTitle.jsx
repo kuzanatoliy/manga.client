@@ -1,31 +1,27 @@
 import React from 'react';
-import withTheme from 'material-ui/styles/withTheme';
+import withStyles from 'material-ui/styles/withStyles';
 import * as PropTypes from 'prop-types';
 
 function MainTitle(props) {
-  const colors = props.theme.palette[props.color];
-  const typography = props.theme.typography.title.fontFamily;
   return (
-    <h1 style={ createStyle(colors, typography) }>{ props.children }</h1>
+    <h1 className={ props.classes.mainTitle }>{ props.children }</h1>
   );
 };
 
-function createStyle(colors, typography) {
+function createStyles(theme) {
+  const { light, main, dark } = theme.palette.primary;
   return ({
-    color: colors.main,
-    fontFamily: typography,
-    fontSize: '4em',
-    margin: 0,
-    textShadow: [`0.05em 0.05em 0.2em ${ colors.light }`, `0.05em 0.05em 0.1em ${ colors.dark }`]
+      mainTitle: {
+      color: main,
+      fontFamily: theme.typography.title.fontFamily,
+      margin: 0,
+      textShadow: [`0.05em 0.05em 0.2em ${ light }`, `0.05em 0.05em 0.1em ${ dark }`],
+    }
   });
 }
 
-MainTitle.defaultProps = {
-  color: 'primary'
-};
-
 MainTitle.propTypes = {
-  color: PropTypes.oneOf(['primary', 'secondary', 'error'])
+  classes: PropTypes.object.isRequired
 };
 
-export default withTheme()(MainTitle);
+export default withStyles(createStyles)(MainTitle);
