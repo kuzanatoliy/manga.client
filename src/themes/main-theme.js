@@ -1,18 +1,12 @@
 import { blue } from 'material-ui/colors';
 import { CORMORANT_SC, CORMORANT_INFANT } from '../constants/font-families';
-//import {  } from 'material-ui/styles/colors';
-/*import {
-  cyan500, cyan700,
-  pinkA200,
-  grey100, grey300, grey400, grey500,
-  white, darkBlack, fullBlack,
-} from '../colors';
-import {fade} from '../../utils/colorManipulator';
-import spacing from '../spacing';*/
 
 const LIGHT = 100;
 const MAIN = 600;
 const DARK = 900;
+
+const HEADER_HEIGHT = '6em';
+const FOOTER_HEIGHT = '2em';
 
 export default {
   palette: {
@@ -31,11 +25,14 @@ export default {
   sizing: {
     side: 'calc((100% - 1366px) / 2)',
     header: {
-      height: '6em',
+      height: HEADER_HEIGHT,
       fontSize: '4em'
     },
+    main: {
+      minHeight: `calc(100vh - ${ HEADER_HEIGHT } - ${ FOOTER_HEIGHT })`
+    },
     footer: {
-      height: '2em'
+      height: FOOTER_HEIGHT
     }
   }
 };
