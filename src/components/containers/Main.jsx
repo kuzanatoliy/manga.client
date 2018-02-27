@@ -1,11 +1,14 @@
 import React from 'react';
 import withStyles from 'material-ui/styles/withStyles';
 import * as PropTypes from 'prop-types'; 
+import { MainNavigator as Navigator } from '../navigators';
 
 function Main(props) {
   return (
     <section className={ `${ props.className } ${ props.classes.container }` }>
-      <nav className={ props.classes.nav }></nav>
+      <nav className={ props.classes.nav }>
+        <Navigator />
+      </nav>
       <main className={ props.classes.main }>{ props.children }</main>
     </section>
   );
@@ -26,7 +29,8 @@ function createStyles(theme) {
       minHeight: theme.sizing.main.minHeight
     },
     nav: {
-      padding: `0 ${ theme.sizing.side }`
+      padding: `0 ${ theme.sizing.side }`,
+      height: theme.sizing.nav.height
     },
     main: {
       padding: `0 ${ theme.sizing.side }`

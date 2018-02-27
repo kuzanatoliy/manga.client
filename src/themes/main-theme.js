@@ -33,6 +33,10 @@ export default {
     },
     footer: {
       height: FOOTER_HEIGHT
+    },
+    nav: {
+      height: '3em',
+      fontSize: '1.75em'
     }
   }
 };
