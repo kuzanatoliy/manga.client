@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import withStyles from 'material-ui/styles/withStyles';
 import * as PropTypes from 'prop-types';
 import { CircleProgress } from 'material-ui/Progress';
