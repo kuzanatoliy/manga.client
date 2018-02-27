@@ -4,7 +4,7 @@ import Paper from 'material-ui/Paper';
 //import { lightBlue600, lightBlue900 } from 'material-ui/styles/colors';
 import { MANGA_URL } from '../constants/urls';
 import { CORMORANT_SC, CORMORANT_INFANT } from '../constants/font-families';
-import Link from './RouterLink';
+import { RouterLink as Link } from './links';
 
 function MangaPreview(props) {
   const { mangaId, info, cover, name } = props;
