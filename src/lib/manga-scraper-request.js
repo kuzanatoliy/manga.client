@@ -1,9 +1,9 @@
-const URL = 'https://doodle-manga-scraper.p.mashape.com/mangareader.net';
+import { URL, KEY } from '../constants/source';
 
 const OPTIONS = {
   method: 'get',
   headers: {
-    'X-Mashape-Key': 'CZcXukrY9xmshrPgUlZ5JJSL6z0bp1Kwy1JjsnAbcRAgc33hgD',
+    'X-Mashape-Key': KEY,
     'Accept': 'text/plain'
   } 
 };
