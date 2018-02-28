@@ -1,7 +1,7 @@
-import View from '../components/MangaView';
-import { getManga } from '../lib/manga-scraper-request';
+import View from '../MangaView';
+import { getManga } from '../../lib/manga-scraper-request';
 import { connect } from 'react-redux';
-import { actions } from '../action/manga-action';
+import { actions } from '../../action/manga-action';
 
 class MangaView extends View {
   componentDidMount() {

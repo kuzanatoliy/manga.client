@@ -1,7 +1,7 @@
-import Navigator from '../components/GenreNavigator';
-import { getGenreList } from '../lib/manga-scraper-request';
+import { GenreNavigator as Navigator } from '../navigators';
+import { getGenreList } from '../../lib/manga-scraper-request';
 import { connect } from 'react-redux';
-import { actions } from '../action/genres-action';
+import { actions } from '../../action/genres-action';
 
 class GenreNavigator extends Navigator {
   componentDidMount() {

@@ -1,11 +1,17 @@
-import List from '../components/MangaPreviewsList';
-import { getMangaList, getMangaByGenre } from '../lib/manga-scraper-request';
+import List from '../MangaPreviewsList';
+import { getMangaList, getMangaByGenre } from '../../lib/manga-scraper-request';
 import { connect } from 'react-redux';
-import { actions } from '../action/manga-list-action';
+import { actions } from '../../action/manga-list-action';
 
 class MangaPreviewsList extends List {
   componentDidMount() {
     this.props.loadingData(this.props.genreId);
+  }
+  
+  componentWillUpdate(nextProps) {
+    if(this.props.genreId !== nextProps.genreId) {
+      this.props.loadingData(nextProps.genreId);
+    }
   }
 }
 
