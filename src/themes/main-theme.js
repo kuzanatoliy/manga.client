@@ -8,7 +8,11 @@ const DARK = 900;
 const HEADER_HEIGHT = '6em';
 const FOOTER_HEIGHT = '2em';
 
+<<<<<<< HEAD
 const theme = {
+=======
+export default {
+>>>>>>> 0b7a103501c1897316afa4943266d3f0289a5570
   palette: {
     primary: {
       light: blue[LIGHT],
@@ -33,6 +37,13 @@ const theme = {
     },
     footer: {
       height: FOOTER_HEIGHT
+<<<<<<< HEAD
+=======
+    },
+    nav: {
+      height: '3em',
+      fontSize: '1.75em'
+>>>>>>> 0b7a103501c1897316afa4943266d3f0289a5570
     }
   }
 };

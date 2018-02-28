@@ -6,7 +6,7 @@ import Menu from 'material-ui/Menu';
 import LoadingComponent from './LoadingComponent';
 import { CATALOG_URL } from '../constants/urls';
 import { CORMORANT_INFANT } from '../constants/font-families';
-import Link from './RouterLink';
+import { RouterLink as Link } from './links';
 
 class GenreNavigator extends LoadingComponent {
   constructor(props) {
