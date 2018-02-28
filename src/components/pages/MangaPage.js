@@ -1,5 +1,5 @@
 import React from 'react';
-import MangaView from '../redux-components/MangaView';
+import MangaView from '../../redux-components/MangaView';
 
 function MangaPage(props) {
   /*return (

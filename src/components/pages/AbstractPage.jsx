@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import withStyles from 'material-ui/styles/withStyles';
 import * as PropTypes from 'prop-types';
 
@@ -21,12 +21,17 @@ class AbstractPage extends Component {
   
   render() {
     return (
-      <>
+      <Fragment>
         <section className={ this.props.classes.controls }>{ this.createControlPanel() }</section>
         <section className={ this.props.classes.body }>{ this.createBody() }</section>
-      </>
+      </Fragment>
     );
   }
+
+  static propTypes = {
+    ControlPanel: PropTypes.func.isRequired,
+    Body: PropTypes.func.isRequired
+  };
 }
 
 function createStyles(theme) {

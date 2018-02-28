@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 import { HOME_URL, CATALOG_URL, MANGA_URL } from './constants/urls';
-import { CatalogPage, MangaPage } from './pages';
+import { CatalogPage, MangaPage } from './components/pages';
 import { Main } from './components/containers';
 
 function AppRouter() {

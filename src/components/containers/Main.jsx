@@ -24,7 +24,6 @@ Main.defaultProps = {
 };
 
 function createStyles(theme) {
-  const { minHeight } = theme.sizing.main;
   return ({
     container: {
       minHeight: theme.sizing.main.minHeight
