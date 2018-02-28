@@ -5,9 +5,9 @@ import { MainNavigator as Navigator } from '../navigators';
 
 function Main(props) {
   return (
-    <section className={ `${ props.className } ${ props.classes.container }` }>
+    <section className={ `${ props.classes.container } ${ props.className }` }>
       <nav className={ props.classes.nav }>
-        <Navigator />
+        <Navigator className={ props.classes.navContent }/>
       </nav>
       <main className={ props.classes.main }>{ props.children }</main>
     </section>
@@ -30,11 +30,13 @@ function createStyles(theme) {
       minHeight: theme.sizing.main.minHeight
     },
     nav: {
-      padding: `0 ${ theme.sizing.side }`,
       height: theme.sizing.nav.height
     },
-    main: {
+    navContent: {
       padding: `0 ${ theme.sizing.side }`
+    },
+    main: {
+      padding: `1em ${ theme.sizing.side }`
     }
   });
 }

@@ -5,7 +5,7 @@ import NavLink from 'react-router-dom/NavLink';
 
 function RouterLink(props) {
   return (
-    <NavLink to={ props.url } className={ `${ props.className } ${ props.classes.style }` }>
+    <NavLink to={ props.url } className={ `${ props.classes.style } ${ props.className }` }>
       { props.children }
     </NavLink>
   );

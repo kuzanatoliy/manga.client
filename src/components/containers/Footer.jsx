@@ -5,7 +5,7 @@ import { SignatureTitle } from '../titles';
 
 function Footer(props) {
   return (
-    <footer className={ `${ props.className } ${ props.classes.container }` }>
+    <footer className={ `${ props.classes.container } ${ props.className }` }>
       <SignatureTitle className={ props.classes.body }>{ props.title }</SignatureTitle>
     </footer>
   );
