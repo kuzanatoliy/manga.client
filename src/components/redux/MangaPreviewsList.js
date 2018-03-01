@@ -1,4 +1,4 @@
-import List from '../MangaPreviewsList';
+import { PreviewsList as List } from '../manga';
 import { getMangaList, getMangaByGenre } from '../../lib/manga-scraper-request';
 import { connect } from 'react-redux';
 import { actions } from '../../action/manga-list-action';

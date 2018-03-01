@@ -16,6 +16,10 @@ class Paginator extends Component {
     style: {},
     buttonStyle: {},
     controlsStyle: {},
+    classes: {
+      controls: '',
+      controlButton: ''
+    }
   };
 
   static propTypes = {
@@ -32,7 +36,8 @@ class Paginator extends Component {
     showingButtons: PropTypes.number,
     style: PropTypes.object,
     buttonStyle: PropTypes.object,
-    controlsStyle: PropTypes.object
+    controlsStyle: PropTypes.object,
+    classes: PropTypes.object.isRequired
   };
   
   constructor (props) {
@@ -56,11 +61,11 @@ class Paginator extends Component {
   }
 
   createButton(number, title, className, disabled = false) {
+    console.log(this.props.classes);
     return (
       <button 
-        style = { this.props.buttonStyle }
         key={ className + number }
-        className={ `${ className } ${ (this.state.activePage === number) ? 'active' : '' }` }
+        className={ `${ className } ${ this.props.classes.controlButton } ${ (this.state.activePage === number) ? 'active' : '' }` }
         onClick={ () => this.setState({ activePage: number }) }
         disabled={ disabled }
       >
@@ -133,13 +138,13 @@ class Paginator extends Component {
   
   render () {
     const { activePage } = this.state;
-    const { className, list, createComponent, numberOfItemsForPage, style, controlsStyle } = this.props;
+    const { className, list, createComponent, numberOfItemsForPage, classes } = this.props;
     const firstNumber = (activePage - 1) * numberOfItemsForPage;
     const lastNumber = firstNumber + numberOfItemsForPage;
     return (
-      <div className={ `paginator ${ className }` } style={ style }>
+      <div className={ className }>
         { list.slice(firstNumber, lastNumber ).map(createComponent) }
-        <div className='paginator-controls' style={ controlsStyle }>
+        <div className={ classes.controls }>
           { this.createFirstPageButton() }
           { this.createPrevPageButton() }
           { this.createPagesButtons() }

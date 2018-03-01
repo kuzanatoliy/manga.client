@@ -1,9 +1,8 @@
 import React from 'react';
-import LoadingComponent from './LoadingComponent';
+import { Loading } from './load';
 import TextField from 'material-ui/TextField';
-//import RaisedButton from 'material-ui/RaisedButton';
 
-class MangaView extends LoadingComponent {
+class MangaView extends Loading {
   createBody() {
     const { manga, mangaId } = this.props;
     const { name, author, status, yearOfRelease, genres, info, cover, lastUpdate, chapters } = manga;
