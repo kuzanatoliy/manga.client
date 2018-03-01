@@ -20,7 +20,7 @@ class MainNavigator extends Component {
   
   render() {
     return (
-      <ul className={ this.props.classes.container }>
+      <ul className={ `${ this.props.classes.container } ${ this.props.className }` }>
         { Object.keys(MAIN_URLS).map(this.createItem) }
       </ul>
     );
@@ -42,7 +42,6 @@ function createStyles(theme) {
       margin: 0,
       padding: 0,
       height: '100%',
-      width: '100%',
       backgroundColor: theme.palette.primary.main
     },
     item: {

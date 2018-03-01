@@ -5,7 +5,7 @@ import { MainTitle } from '../titles';
 
 function Header(props) {
   return (
-    <header className={ `${ props.className } ${ props.classes.container }` }>
+    <header className={ `${ props.classes.container } ${ props.className }` }>
       <MainTitle className={ props.classes.body }>{ props.title }</MainTitle>
     </header>
   );

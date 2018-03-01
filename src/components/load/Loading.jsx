@@ -1,17 +1,10 @@
 import React, { Component } from 'react';
-import withStyles from 'material-ui/styles/withStyles';
 import * as PropTypes from 'prop-types';
-import { CircleProgress } from 'material-ui/Progress';
+import { CircularProgress as Progress } from 'material-ui/Progress';
 
-class LoadingComponent extends Component {
-  constructor(props) {
-    super(props);
-    this.createLoading = this.createLoading.bind(this);
-    this.createBody = this.createBody.bind(this);
-  }
-  
+class Loading extends Component {
   createLoading() {
-    return <CircleProgress className={ this.props.classes.loading } />;
+    return <Progress />;
   }
 
   createBody() {
@@ -22,7 +15,7 @@ class LoadingComponent extends Component {
   render() {
     const { loading, className } = this.props;
     return (
-      <div className={ className }>
+      <div className={ className } style={ { textAlign: 'center' } }>
         { loading ? this.createLoading() : this.createBody() }
       </div>
     );
@@ -41,12 +34,4 @@ class LoadingComponent extends Component {
   }
 }
 
-function createStyles() {
-  return ({
-    loading: {
-      textAlign: 'center'
-    }
-  });
-}
-
-export default withStyles(createStyles)(Loading);
+export default Loading;
