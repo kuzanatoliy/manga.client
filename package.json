@@ -3,11 +3,8 @@
   "version": "0.2.2",
   "private": true,
   "scripts": {
-    "build-css": "node-sass-chokidar src/ -o src/",
     "start": "react-scripts start",
-    "start:sass": "yarn run build-css && yarn start",
     "build": "react-scripts build",
-    "build:sass": "yarn run build-css && yarn run build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
