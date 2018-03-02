@@ -61,7 +61,6 @@ class Paginator extends Component {
   }
 
   createButton(number, title, className, disabled = false) {
-    console.log(this.props.classes);
     return (
       <button 
         key={ className + number }

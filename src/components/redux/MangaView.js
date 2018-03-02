@@ -1,4 +1,4 @@
-import View from '../MangaView';
+import { View } from '../manga';
 import { getManga } from '../../lib/manga-scraper-request';
 import { connect } from 'react-redux';
 import { actions } from '../../action/manga-action';

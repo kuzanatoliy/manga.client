@@ -13,8 +13,8 @@ function AbstractPage(props) {
 }
 
 AbstractPage.propTypes = {
-  controlPanel: PropTypes.object.isRequired,
-  body: PropTypes.object.isRequired
+  controlPanel: PropTypes.object,
+  body: PropTypes.object
 };
 
 function createStyles(theme) {
