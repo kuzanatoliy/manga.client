@@ -3,7 +3,16 @@ import { actionTypes } from '../action/manga-action';
 const defaultState = {
   loading: false,
   error: null,
-  manga: {}
+  manga: {
+    name: '',
+    author: [],
+    status: '',
+    yearOfRelease: 0,
+    info: '',
+    cover: '',
+    lastUpdate: '',
+    chapters: []
+  }
 };
 
 const reducer = (state = defaultState, action) => {
